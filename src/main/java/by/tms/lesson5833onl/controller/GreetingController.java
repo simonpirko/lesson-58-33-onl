@@ -18,7 +18,7 @@ public class GreetingController {
 
     @GetMapping
     public ResponseEntity<GreetingResponse> greeting(@RequestParam("name") String name) {
-        String result = "Hello %s!!!".formatted(name);
+        String result = "Hello %s!".formatted(name);
 
         greetingHistoryRepository.save(new Greeting().setMessage(result));
 
